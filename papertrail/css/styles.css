@@ -1,0 +1,418 @@
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #DDDBDE;
+}
+
+
+/* Apply a reset to remove default padding and margin */
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar container */
+nav{
+    background-color: #2667a0;
+    /* Background color for the navigation bar */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 3; /* Ensure the navbar is above the modal */
+    padding: 12px;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+}
+
+.navbar-right{
+    align-items: center; 
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #DDDBDE; 
+    color: #333; 
+    margin-right: 30px; 
+    width: 90px; 
+    padding-left: 20px; 
+    padding-right: 5px; 
+    height: 35px ;
+    border-radius: 50px; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-admin {
+    background-color: #DDDBDE;
+    color: #333;
+    margin-right: 30px; /* You may need to adjust this margin */
+    padding-left: 20px;
+    height: 35px;
+    border-radius: 50px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-admin p {
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+#login-button{
+    align-items: center; 
+    display: flex; 
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Style the navigation list (ul) */
+nav ul {
+    list-style-type: none;
+    /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.btn {
+    margin-right: 20px;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.adbtn {
+    position: absolute;
+    left: 10px;
+    top: 92px;
+    background-color: #2667a0;
+    color: #fff;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.filter{
+    margin-right: 20px;
+    border: 0;
+    background-color: #2667a0; 
+    color: white; 
+    padding: 5px; 
+    border-radius: 4px; 
+    padding-right: 10px; 
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+.reset{
+    margin-right: 20px;
+    border: 0;
+    background-color: #2667a0; 
+    color: white; 
+    padding-top: 3px; 
+    padding-bottom: 5px; 
+    padding-right: 10px; 
+    padding-left: 10px; 
+    text-decoration: none; 
+    margin-left: -20px; 
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.row{
+    display: inline-block;
+    position: absolute;
+    margin-top: 81px;
+    right: 19%;
+}
+
+.form-select{
+    padding: 4px;
+    border-radius: 4px;
+}
+
+img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.inp {
+    width: 350px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.sub {
+    background-color: #2667a0;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.form-group{
+    display: inline-block;
+}
+
+.lbl_ad{
+    font-size: 10px;
+}
+
+.ad{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Center the modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 20px;
+    /* Add some spacing around the container */
+}
+
+.tabs {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 720px;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    margin-top: 100px;
+    border-bottom: 5px solid #2667a0;
+    background-color: white;
+}
+
+.tabs_name {
+    position: sticky;
+    top: 0;
+    border: 1px;
+    color: #CAD4DF;
+}
+
+/* CSS for the table */
+table {
+    width: 100%;
+    top: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #2667a0;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    background-color: #2667a0;
+    color: #fff;
+}
+
+td {
+    padding: 5px;
+}
+
+.add-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    /* Add spacing between the table and the button */
+}
+
+.sch {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.inp_sch {
+    padding: 5px;
+    border-radius: 4px;
+    width: 250px;
+    border: 1px solid black;
+}
+
+.btn_sch {
+    background-color: #2667a0;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+    margin-right: 1px;
+    border-radius: 4px;
+}
+
+.search-results {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-results h3 {
+    color: #007BFF;
+}
+
+.search-result-item {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2667a0;
+    color: white;
+}
+
+    /* Add a style for the current page */
+    .pagination .current a{   
+        background-color: #283a49 !important;
+        color: white !important;
+         /* Change the background color for the current page */
+    }
+
+/* CSS for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* CSS for the popup content */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* CSS for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* for admin page*/
+
+.rec_sch {
+    display: inline-block;
+}
+
+.srch {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    top: 60px;
+}
+
+.btn3{
+    padding: 10px;
+    background-color: #2667a0;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+.btn4{
+    padding: 10px;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+}
+
+.back-button {
+    top: 80%;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    padding-left: 16.5%;
+    padding-right: 16.6%;
+    border-radius: 5px;
+    left: 31%;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+}
